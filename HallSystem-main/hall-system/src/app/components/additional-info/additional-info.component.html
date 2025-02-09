@@ -1,0 +1,16 @@
+<ul *ngIf="details">
+  Детайли:
+  <li>
+    Компютърна зала:
+    <span *ngIf="details.computerHall">да</span>
+    <span *ngIf="!details.computerHall">не</span>
+  </li>
+  <li>
+    Има наличен проектор:
+    <span *ngIf="details.hasProjector;">да</span>
+    <span *ngIf="!details.hasProjector">не</span>
+  </li>
+  <li>
+    Капацитет (брой места в залата): <span>{{details.capacity}}</span>
+  </li>
+</ul>

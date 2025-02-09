@@ -1,0 +1,17 @@
+<div *ngIf="router.url !== '/login' && router.url !== '/register'" id="header">
+  <div id="dropdown"></div>
+  <div id="navigation">
+    <ul>
+      <li><a [routerLink]="['/pages/homePage']">Всички зали</a></li>
+      <li><a [routerLink]="['/reservation']">Резервирай зала</a></li>
+      <li>
+        <a [routerLink]="['/pages/myReservations']" routerLinkActive="active"
+          >Моите резервации</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div id="buttons">
+    <button mat-button type="button" class="btn btn-light" (click)="logout()">Изход</button>
+  </div>
+</div>
